@@ -1,0 +1,32 @@
+aid: microsoft-azure-mysql
+url: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-mysql/refs/heads/main/apis.yml
+apis:
+  - aid: microsoft-azure-mysql:rest-api
+    name: Azure Database for MySQL REST API
+    tags:
+      - Database
+      - MySQL
+      - Managed Database
+      - Open Source
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://management.azure.com/
+    humanURL: https://learn.microsoft.com/en-us/rest/api/mysql/
+    properties:
+      - url: https://learn.microsoft.com/en-us/rest/api/mysql/
+        type: Documentation
+    description: >-
+      Azure Database for MySQL REST API enables management of fully managed MySQL database servers with built-in high availability, automated backups, and scaling. It supports server creation, firewall rules, database management, and replication configuration.
+common:
+  - type: Portal
+    url: https://portal.azure.com/
+  - type: Pricing
+    url: https://azure.microsoft.com/en-us/pricing/
+  - type: Terms of Service
+    url: https://www.microsoft.com/en-us/legal/terms-of-use
+  - type: Privacy Policy
+    url: https://privacy.microsoft.com/en-us/privacystatement
+  - type: Support
+    url: https://support.microsoft.com/
+maintainers:
+  - name: Kin Lane
+    email: kin@apievangelist.com
