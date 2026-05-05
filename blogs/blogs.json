@@ -1,0 +1,13 @@
+{
+  "repo": "microsoft-azure-mysql",
+  "feeds": [
+    {
+      "source": "https://azure.microsoft.com/en-us/blog/tag/azure-database-for-mysql/",
+      "feed_url": "https://azure.microsoft.com/en-us/blog/feed/",
+      "saved": 10,
+      "title": "Microsoft Azure Blog"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:32:17Z"
+}
