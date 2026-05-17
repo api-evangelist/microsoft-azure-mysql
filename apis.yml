@@ -39,7 +39,7 @@ apis:
         url: https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/servers
       - type: Authentication
         url: https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow
-      - type: Getting Started
+      - type: GettingStarted
         url: https://learn.microsoft.com/en-us/azure/mysql/flexible-server/quickstart-create-server-portal
   - name: Azure Database for MySQL Databases API
     description: >-
@@ -179,7 +179,7 @@ common:
     url: https://portal.azure.com
   - type: Documentation
     url: https://learn.microsoft.com/en-us/azure/mysql/
-  - type: Getting Started
+  - type: GettingStarted
     url: https://learn.microsoft.com/en-us/azure/mysql/flexible-server/quickstart-create-server-portal
   - type: Authentication
     url: https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow
@@ -187,25 +187,25 @@ common:
     url: https://learn.microsoft.com/en-us/azure/mysql/flexible-server/connect-csharp
   - type: Pricing
     url: https://azure.microsoft.com/en-us/pricing/details/mysql/
-  - type: Status
+  - type: StatusPage
     url: https://status.azure.com/
   - type: Support
     url: https://azure.microsoft.com/en-us/support/options/
   - type: Blog
     url: https://azure.microsoft.com/en-us/blog/tag/azure-database-for-mysql/
-  - type: Change Log
+  - type: ChangeLog
     url: https://learn.microsoft.com/en-us/azure/mysql/flexible-server/whats-new
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://azure.microsoft.com/en-us/support/legal/
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://privacy.microsoft.com/en-us/privacystatement
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/Azure
   - type: Website
     url: https://azure.microsoft.com/en-us/products/mysql
   - type: Login
     url: https://portal.azure.com
-  - type: Sign Up
+  - type: SignUp
     url: https://azure.microsoft.com/en-us/free
 maintainers:
   - FN: Kin Lane
