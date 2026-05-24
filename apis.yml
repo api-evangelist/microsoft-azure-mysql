@@ -191,6 +191,8 @@ common:
   url: https://portal.azure.com
 - type: SignUp
   url: https://azure.microsoft.com/en-us/free
+- type: LLMsTxt
+  url: https://portal.azure.com/llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
