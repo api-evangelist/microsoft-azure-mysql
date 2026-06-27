@@ -196,9 +196,9 @@ common:
     url: https://azure.microsoft.com/en-us/products/mysql
   - type: Login
     url: https://portal.azure.com
-  - type: SignUp
+  - type: Signup
     url: https://azure.microsoft.com/en-us/free
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://portal.azure.com/llms.txt
 maintainers:
   - FN: Kin Lane

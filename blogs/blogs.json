@@ -2,24 +2,11 @@
   "repo": "microsoft-azure-mysql",
   "feeds": [
     {
-      "source": "https://azure.microsoft.com/en-us/blog/tag/azure-database-for-mysql/feed/",
-      "error": "HTTPError"
-    },
-    {
-      "source": "https://techcommunity.microsoft.com/tag/azure%20mysql",
-      "feed_url": "https://techcommunity.microsoft.com/tag/azure%20mysql",
-      "title": "",
+      "source": "https://azure.microsoft.com/en-us/blog/tag/azure-database-for-mysql/",
       "saved": 0,
-      "method": "none"
-    },
-    {
-      "source": "https://azure.microsoft.com/en-us/support/options/",
-      "feed_url": "https://azure.microsoft.com/en-us/support/options/",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "error": "timeout on all WebFetch attempts"
     }
   ],
   "post_count": 10,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:54:18Z"
 }
