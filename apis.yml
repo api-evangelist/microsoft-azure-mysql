@@ -166,6 +166,10 @@ apis:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/operations
 common:
+  - type: DomainSecurity
+    url: security/microsoft-azure-mysql-domain-security.yml
+  - type: Authentication
+    url: authentication/microsoft-azure-mysql-authentication.yml
   - type: OAuthScopes
     url: scopes/microsoft-azure-mysql-scopes.yml
   - type: Portal
