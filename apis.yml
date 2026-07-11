@@ -166,6 +166,8 @@ apis:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/operations
 common:
+  - type: OAuthScopes
+    url: scopes/microsoft-azure-mysql-scopes.yml
   - type: Portal
     url: https://portal.azure.com
   - type: Documentation
