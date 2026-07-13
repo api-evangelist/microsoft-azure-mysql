@@ -2,11 +2,13 @@
   "repo": "microsoft-azure-mysql",
   "feeds": [
     {
-      "source": "https://azure.microsoft.com/en-us/blog/tag/azure-database-for-mysql/",
+      "source": "https://azure.microsoft.com/en-us/support/options/",
+      "feed_url": "https://azure.microsoft.com/en-us/support/options/",
+      "title": "",
       "saved": 0,
-      "error": "timeout on all WebFetch attempts"
+      "method": "none"
     }
   ],
   "post_count": 10,
-  "fetched": "2026-06-27T12:54:18Z"
+  "fetched": "2026-07-11T11:50:51Z"
 }
