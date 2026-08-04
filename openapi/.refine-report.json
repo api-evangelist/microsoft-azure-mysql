@@ -1,0 +1,16 @@
+{
+  "provider": "microsoft-azure-mysql",
+  "sources": [
+    "microsoft-azure-mysql-operations-api-openapi.yml",
+    "microsoft-azure-mysql-servers-api-openapi.yml"
+  ],
+  "outputs": [
+    "microsoft-azure-mysql-operations-api-openapi.yml",
+    "microsoft-azure-mysql-servers-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
