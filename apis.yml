@@ -22,6 +22,13 @@ tags:
   - Flexible Server
   - Managed Database
   - MySQL
+  - Open-Source
+  - Relational Database
+tags_raw:
+  - Database
+  - Flexible Server
+  - Managed Database
+  - MySQL
   - Open Source
   - Relational Database
 created: '2026-03-13'
@@ -151,6 +158,9 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/operations
   baseURL: https://management.azure.com
   tags:
+  - Provider
+  - Resource Provider
+  tags_raw:
   - Operations
   - Provider
   - Resource Provider
@@ -162,7 +172,8 @@ apis:
   description: Operations operations
   humanURL: https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/servers
   baseURL: https://management.azure.com
-  tags:
+  tags: []
+  tags_raw:
   - Operations
   properties:
   - type: OpenAPI
