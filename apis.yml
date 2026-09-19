@@ -170,7 +170,7 @@ apis:
   humanURL: https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/operations
   baseURL: https://management.azure.com
   tags:
-  - Provider
+  - Providers
   - Resource Provider
   tags_raw:
   - Operations
