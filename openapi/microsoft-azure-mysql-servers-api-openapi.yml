@@ -170,11 +170,11 @@ paths:
                 $ref: '#/components/schemas/ErrorResponse'
 components:
   parameters:
-    resourceGroupName:
-      name: resourceGroupName
+    subscriptionId:
+      name: subscriptionId
       in: path
       required: true
-      description: The name of the resource group.
+      description: The ID of the target subscription.
       schema:
         type: string
     apiVersion:
@@ -184,26 +184,14 @@ components:
       description: The API version to use for this operation.
       schema:
         type: string
-    subscriptionId:
-      name: subscriptionId
+    resourceGroupName:
+      name: resourceGroupName
       in: path
       required: true
-      description: The ID of the target subscription.
+      description: The name of the resource group.
       schema:
         type: string
   schemas:
-    ErrorResponse:
-      type: object
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-            message:
-              type: string
-            target:
-              type: string
     Resource:
       type: object
       properties:
@@ -226,6 +214,18 @@ components:
         properties:
           type: object
           description: Resource-specific properties.
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            target:
+              type: string
     ResourceList:
       type: object
       properties:
