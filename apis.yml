@@ -218,6 +218,8 @@ apis:
     url: >-
       https://learn.microsoft.com/en-us/azure/mysql/flexible-server/quickstart-create-server-portal
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/azure-database-for-mysql/overview
   - type: Plans
     url: plans/microsoft-azure-mysql-plans-pricing.yml
   - type: RateLimits
