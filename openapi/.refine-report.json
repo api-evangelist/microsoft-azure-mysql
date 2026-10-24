@@ -1,9 +1,11 @@
 {
   "provider": "microsoft-azure-mysql",
   "sources": [
+    "_original/microsoft-azure-mysql-openapi.json",
     "_ae-authored/microsoft-azure-mysql-openapi.yml"
   ],
   "outputs": [
+    "microsoft-azure-mysql-webapps-api-openapi.yml",
     "microsoft-azure-mysql-operations-api-openapi.yml",
     "microsoft-azure-mysql-servers-api-openapi.yml"
   ],
@@ -11,9 +13,11 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "microsoft-azure-mysql-openapi.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "microsoft-azure-mysql-openapi.json: declared missing tag: WebApps",
     "microsoft-azure-mysql-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: already-registered"
+    "apis.yml register: written (+1 apis, 11 total)"
   ],
   "skipped": [
     "microsoft-azure-mysql-operations-api-openapi.yml: previously refined output, superseded by openapi/_original/",

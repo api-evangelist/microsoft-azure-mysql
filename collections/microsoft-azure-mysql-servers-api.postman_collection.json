@@ -1,1656 +1,1589 @@
 {
+  "info": {
+    "_postman_id": "2869506d-3fc0-470d-a813-03a80cbb349c",
+    "name": "Azure Database for MySQL REST Servers API",
+    "description": "Azure Database for MySQL is a fully managed, scalable MySQL database service. The REST API manages flexible servers, databases, firewall rules, configurations, and backups.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-21T20:19:36.000Z",
+    "updatedAt": "2026-10-21T20:19:37.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-2869506d-3fc0-470d-a813-03a80cbb349c"
+  },
   "item": [
     {
-      "id": "564f37b2-0db0-4b76-9ab5-84ff0cb0924e",
-      "name": "Servers",
-      "description": {
-        "content": "Servers operations",
-        "type": "text/plain"
-      },
+      "name": "subscriptions",
       "item": [
         {
-          "id": "d444ebae-eda3-42f3-b70e-dee27fa081a7",
-          "name": "Azure Database for MySQL REST API List by subscription",
-          "request": {
-            "name": "Azure Database for MySQL REST API List by subscription",
-            "description": {
-              "content": "Lists all flexibleServers resources within the specified subscription.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "subscriptions",
-                ":subscriptionId",
-                "providers",
-                "Microsoft.DBforMySQL",
-                "flexibleServers"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [
-                {
-                  "disabled": false,
-                  "key": "api-version",
-                  "value": "<string>",
-                  "description": "(Required) The API version to use for this operation."
-                }
-              ],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "subscriptionId",
-                  "description": "(Required) The ID of the target subscription."
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
+          "name": "{subscriptionId}",
+          "item": [
             {
-              "id": "5f133a23-2103-41d3-af44-d61edb836c9f",
-              "name": "Resource list",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "subscriptions",
-                    ":subscriptionId",
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "flexibleServers"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "api-version",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "subscriptionId",
-                      "description": "(Required) The ID of the target subscription."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "providers",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "Microsoft.DBforMySQL",
+                  "item": [
+                    {
+                      "name": "flexibleServers",
+                      "item": [
+                        {
+                          "name": "Azure Database for MySQL REST API List by subscription",
+                          "id": "ab2e8c5d-007b-482b-a9bc-c5694cca0c98",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/subscriptions/:subscriptionId/providers/Microsoft.DBforMySQL/flexibleServers?api-version=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "subscriptions",
+                                ":subscriptionId",
+                                "providers",
+                                "Microsoft.DBforMySQL",
+                                "flexibleServers"
+                              ],
+                              "query": [
+                                {
+                                  "description": "(Required) The API version to use for this operation.",
+                                  "key": "api-version",
+                                  "value": "<string>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "id": "5564097d-2561-4085-ba32-18dda2b4e353",
+                                  "key": "subscriptionId",
+                                  "value": "<string>",
+                                  "description": "(Required) The ID of the target subscription."
+                                }
+                              ]
+                            },
+                            "description": "Lists all flexibleServers resources within the specified subscription."
+                          },
+                          "response": [
+                            {
+                              "id": "25e3d62f-1cd2-49f2-92f1-d735a608cc76",
+                              "name": "Resource list",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: oauth2",
+                                    "key": "Authorization",
+                                    "value": "<token>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/subscriptions/:subscriptionId/providers/Microsoft.DBforMySQL/flexibleServers?api-version=<string>",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "subscriptions",
+                                    ":subscriptionId",
+                                    "providers",
+                                    "Microsoft.DBforMySQL",
+                                    "flexibleServers"
+                                  ],
+                                  "query": [
+                                    {
+                                      "description": "(Required) The API version to use for this operation.",
+                                      "key": "api-version",
+                                      "value": "<string>"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "subscriptionId"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"value\": [\n    {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"location\": \"<string>\",\n      \"tags\": {\n        \"in__6\": \"<string>\",\n        \"eiusmod7\": \"<string>\",\n        \"sitf\": \"<string>\"\n      },\n      \"properties\": {}\n    },\n    {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"location\": \"<string>\",\n      \"tags\": {\n        \"laborisc00\": \"<string>\",\n        \"proident4be\": \"<string>\"\n      },\n      \"properties\": {}\n    }\n  ],\n  \"nextLink\": \"<string>\"\n}",
+                              "createdAt": "2026-10-21T20:19:37.000Z",
+                              "updatedAt": "2026-10-21T20:19:37.000Z",
+                              "uid": "35240-25e3d62f-1cd2-49f2-92f1-d735a608cc76"
+                            },
+                            {
+                              "id": "0dad7404-6858-4753-a802-4a47fbb120e4",
+                              "name": "Error",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: oauth2",
+                                    "key": "Authorization",
+                                    "value": "<token>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/subscriptions/:subscriptionId/providers/Microsoft.DBforMySQL/flexibleServers?api-version=<string>",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "subscriptions",
+                                    ":subscriptionId",
+                                    "providers",
+                                    "Microsoft.DBforMySQL",
+                                    "flexibleServers"
+                                  ],
+                                  "query": [
+                                    {
+                                      "description": "(Required) The API version to use for this operation.",
+                                      "key": "api-version",
+                                      "value": "<string>"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "subscriptionId"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "Internal Server Error",
+                              "code": 500,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\"\n  }\n}",
+                              "createdAt": "2026-10-21T20:19:37.000Z",
+                              "updatedAt": "2026-10-21T20:19:37.000Z",
+                              "uid": "35240-0dad7404-6858-4753-a802-4a47fbb120e4"
+                            }
+                          ],
+                          "createdAt": "2026-10-21T20:19:37.000Z",
+                          "updatedAt": "2026-10-21T20:19:37.000Z",
+                          "uid": "35240-ab2e8c5d-007b-482b-a9bc-c5694cca0c98"
+                        }
+                      ],
+                      "id": "37ea1757-f59b-4ea8-b396-f354074d4d33",
+                      "createdAt": "2026-10-21T20:19:37.000Z",
+                      "updatedAt": "2026-10-21T20:19:37.000Z",
+                      "uid": "35240-37ea1757-f59b-4ea8-b396-f354074d4d33"
+                    }
+                  ],
+                  "id": "8370cf10-ed6d-418c-9f76-67497ba4dce8",
+                  "createdAt": "2026-10-21T20:19:37.000Z",
+                  "updatedAt": "2026-10-21T20:19:37.000Z",
+                  "uid": "35240-8370cf10-ed6d-418c-9f76-67497ba4dce8"
                 }
               ],
-              "body": "{\n  \"value\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"location\": \"string\",\n      \"tags\": {\n        \"key_0\": \"string\"\n      },\n      \"properties\": {}\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"location\": \"string\",\n      \"tags\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"properties\": {}\n    }\n  ],\n  \"nextLink\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "2ce19abc-e00f-4a13-b5c0-0999c7af03e2",
+              "createdAt": "2026-10-21T20:19:37.000Z",
+              "updatedAt": "2026-10-21T20:19:37.000Z",
+              "uid": "35240-2ce19abc-e00f-4a13-b5c0-0999c7af03e2"
             },
             {
-              "id": "b8d3002e-052c-4642-ba37-9f96e85568fd",
-              "name": "Error",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "subscriptions",
-                    ":subscriptionId",
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "flexibleServers"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "api-version",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "subscriptionId",
-                      "description": "(Required) The ID of the target subscription."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "Internal Server Error",
-              "code": 500,
-              "header": [
+              "name": "resourceGroups",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "{resourceGroupName}",
+                  "item": [
+                    {
+                      "name": "providers",
+                      "item": [
+                        {
+                          "name": "Microsoft.DBforMySQL",
+                          "item": [
+                            {
+                              "name": "flexibleServers",
+                              "item": [
+                                {
+                                  "name": "{name}",
+                                  "item": [
+                                    {
+                                      "name": "Azure Database for MySQL REST API Get resource",
+                                      "id": "055e57ca-1bdc-41b9-a362-71d7b70e983c",
+                                      "protocolProfileBehavior": {
+                                        "disableBodyPruning": true
+                                      },
+                                      "request": {
+                                        "method": "GET",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers/:name?api-version=<string>",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "subscriptions",
+                                            ":subscriptionId",
+                                            "resourceGroups",
+                                            ":resourceGroupName",
+                                            "providers",
+                                            "Microsoft.DBforMySQL",
+                                            "flexibleServers",
+                                            ":name"
+                                          ],
+                                          "query": [
+                                            {
+                                              "description": "(Required) The API version to use for this operation.",
+                                              "key": "api-version",
+                                              "value": "<string>"
+                                            }
+                                          ],
+                                          "variable": [
+                                            {
+                                              "id": "316c5a27-203d-4f17-a228-579806499893",
+                                              "key": "subscriptionId",
+                                              "value": "<string>",
+                                              "description": "(Required) The ID of the target subscription."
+                                            },
+                                            {
+                                              "id": "a809e1a8-cd85-4b6f-875b-a35fbb9c8a6c",
+                                              "key": "resourceGroupName",
+                                              "value": "<string>",
+                                              "description": "(Required) The name of the resource group."
+                                            },
+                                            {
+                                              "id": "c3a6efcd-a598-4b30-a121-b1df17375f4a",
+                                              "key": "name",
+                                              "value": "<string>",
+                                              "description": "(Required) Name of the resource."
+                                            }
+                                          ]
+                                        },
+                                        "description": "Gets a specific flexibleServers resource."
+                                      },
+                                      "response": [
+                                        {
+                                          "id": "8a553792-f2dd-42e0-a0a2-1c3dcf23b46e",
+                                          "name": "Resource",
+                                          "originalRequest": {
+                                            "method": "GET",
+                                            "header": [
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "description": "Added as a part of security scheme: oauth2",
+                                                "key": "Authorization",
+                                                "value": "<token>"
+                                              }
+                                            ],
+                                            "url": {
+                                              "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers/:name?api-version=<string>",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "subscriptions",
+                                                ":subscriptionId",
+                                                "resourceGroups",
+                                                ":resourceGroupName",
+                                                "providers",
+                                                "Microsoft.DBforMySQL",
+                                                "flexibleServers",
+                                                ":name"
+                                              ],
+                                              "query": [
+                                                {
+                                                  "description": "(Required) The API version to use for this operation.",
+                                                  "key": "api-version",
+                                                  "value": "<string>"
+                                                }
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "subscriptionId"
+                                                },
+                                                {
+                                                  "key": "resourceGroupName"
+                                                },
+                                                {
+                                                  "key": "name"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "OK",
+                                          "code": 200,
+                                          "_postman_previewlanguage": "json",
+                                          "header": [
+                                            {
+                                              "key": "Content-Type",
+                                              "value": "application/json"
+                                            }
+                                          ],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"tempor_a\": \"<string>\"\n  },\n  \"properties\": {}\n}",
+                                          "createdAt": "2026-10-21T20:19:37.000Z",
+                                          "updatedAt": "2026-10-21T20:19:37.000Z",
+                                          "uid": "35240-8a553792-f2dd-42e0-a0a2-1c3dcf23b46e"
+                                        },
+                                        {
+                                          "id": "47c838d4-777d-4a18-a255-dfd9ad42eb7b",
+                                          "name": "Not found",
+                                          "originalRequest": {
+                                            "method": "GET",
+                                            "header": [
+                                              {
+                                                "description": "Added as a part of security scheme: oauth2",
+                                                "key": "Authorization",
+                                                "value": "<token>"
+                                              }
+                                            ],
+                                            "url": {
+                                              "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers/:name?api-version=<string>",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "subscriptions",
+                                                ":subscriptionId",
+                                                "resourceGroups",
+                                                ":resourceGroupName",
+                                                "providers",
+                                                "Microsoft.DBforMySQL",
+                                                "flexibleServers",
+                                                ":name"
+                                              ],
+                                              "query": [
+                                                {
+                                                  "description": "(Required) The API version to use for this operation.",
+                                                  "key": "api-version",
+                                                  "value": "<string>"
+                                                }
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "subscriptionId"
+                                                },
+                                                {
+                                                  "key": "resourceGroupName"
+                                                },
+                                                {
+                                                  "key": "name"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "Not Found",
+                                          "code": 404,
+                                          "_postman_previewlanguage": "text",
+                                          "header": [],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": null,
+                                          "createdAt": "2026-10-21T20:19:37.000Z",
+                                          "updatedAt": "2026-10-21T20:19:37.000Z",
+                                          "uid": "35240-47c838d4-777d-4a18-a255-dfd9ad42eb7b"
+                                        },
+                                        {
+                                          "id": "e49062a4-e834-48e2-91f3-60d0e3df8c0f",
+                                          "name": "Error",
+                                          "originalRequest": {
+                                            "method": "GET",
+                                            "header": [
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "description": "Added as a part of security scheme: oauth2",
+                                                "key": "Authorization",
+                                                "value": "<token>"
+                                              }
+                                            ],
+                                            "url": {
+                                              "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers/:name?api-version=<string>",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "subscriptions",
+                                                ":subscriptionId",
+                                                "resourceGroups",
+                                                ":resourceGroupName",
+                                                "providers",
+                                                "Microsoft.DBforMySQL",
+                                                "flexibleServers",
+                                                ":name"
+                                              ],
+                                              "query": [
+                                                {
+                                                  "description": "(Required) The API version to use for this operation.",
+                                                  "key": "api-version",
+                                                  "value": "<string>"
+                                                }
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "subscriptionId"
+                                                },
+                                                {
+                                                  "key": "resourceGroupName"
+                                                },
+                                                {
+                                                  "key": "name"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "Internal Server Error",
+                                          "code": 500,
+                                          "_postman_previewlanguage": "json",
+                                          "header": [
+                                            {
+                                              "key": "Content-Type",
+                                              "value": "application/json"
+                                            }
+                                          ],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\"\n  }\n}",
+                                          "createdAt": "2026-10-21T20:19:37.000Z",
+                                          "updatedAt": "2026-10-21T20:19:37.000Z",
+                                          "uid": "35240-e49062a4-e834-48e2-91f3-60d0e3df8c0f"
+                                        }
+                                      ],
+                                      "createdAt": "2026-10-21T20:19:37.000Z",
+                                      "updatedAt": "2026-10-21T20:19:37.000Z",
+                                      "uid": "35240-055e57ca-1bdc-41b9-a362-71d7b70e983c"
+                                    },
+                                    {
+                                      "name": "Azure Database for MySQL REST API Create or update resource",
+                                      "id": "508dd18d-19a2-4741-a160-f31c6f2f5447",
+                                      "protocolProfileBehavior": {
+                                        "disableBodyPruning": true
+                                      },
+                                      "request": {
+                                        "method": "PUT",
+                                        "header": [
+                                          {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                          },
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"tempor_a\": \"<string>\"\n  },\n  \"properties\": {}\n}",
+                                          "options": {
+                                            "raw": {
+                                              "headerFamily": "json",
+                                              "language": "json"
+                                            }
+                                          }
+                                        },
+                                        "url": {
+                                          "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers/:name?api-version=<string>",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "subscriptions",
+                                            ":subscriptionId",
+                                            "resourceGroups",
+                                            ":resourceGroupName",
+                                            "providers",
+                                            "Microsoft.DBforMySQL",
+                                            "flexibleServers",
+                                            ":name"
+                                          ],
+                                          "query": [
+                                            {
+                                              "description": "(Required) The API version to use for this operation.",
+                                              "key": "api-version",
+                                              "value": "<string>"
+                                            }
+                                          ],
+                                          "variable": [
+                                            {
+                                              "id": "3192e6e5-a89c-44a4-a7a9-6eaadef35c4b",
+                                              "key": "subscriptionId",
+                                              "value": "<string>",
+                                              "description": "(Required) The ID of the target subscription."
+                                            },
+                                            {
+                                              "id": "5bafe1f3-baea-4546-9eb9-d993ef403369",
+                                              "key": "resourceGroupName",
+                                              "value": "<string>",
+                                              "description": "(Required) The name of the resource group."
+                                            },
+                                            {
+                                              "id": "fe50cdab-4090-47e7-a15d-d55ab7297737",
+                                              "key": "name",
+                                              "value": "<string>",
+                                              "description": "(Required) Name of the resource."
+                                            }
+                                          ]
+                                        },
+                                        "description": "Creates or updates a flexibleServers resource."
+                                      },
+                                      "response": [
+                                        {
+                                          "id": "5d3e3008-5908-4a92-852d-8c8f9729edc6",
+                                          "name": "Resource updated",
+                                          "originalRequest": {
+                                            "method": "PUT",
+                                            "header": [
+                                              {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "description": "Added as a part of security scheme: oauth2",
+                                                "key": "Authorization",
+                                                "value": "<token>"
+                                              }
+                                            ],
+                                            "body": {
+                                              "mode": "raw",
+                                              "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"tempor_a\": \"<string>\"\n  },\n  \"properties\": {}\n}",
+                                              "options": {
+                                                "raw": {
+                                                  "headerFamily": "json",
+                                                  "language": "json"
+                                                }
+                                              }
+                                            },
+                                            "url": {
+                                              "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers/:name?api-version=<string>",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "subscriptions",
+                                                ":subscriptionId",
+                                                "resourceGroups",
+                                                ":resourceGroupName",
+                                                "providers",
+                                                "Microsoft.DBforMySQL",
+                                                "flexibleServers",
+                                                ":name"
+                                              ],
+                                              "query": [
+                                                {
+                                                  "description": "(Required) The API version to use for this operation.",
+                                                  "key": "api-version",
+                                                  "value": "<string>"
+                                                }
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "subscriptionId"
+                                                },
+                                                {
+                                                  "key": "resourceGroupName"
+                                                },
+                                                {
+                                                  "key": "name"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "OK",
+                                          "code": 200,
+                                          "_postman_previewlanguage": "json",
+                                          "header": [
+                                            {
+                                              "key": "Content-Type",
+                                              "value": "application/json"
+                                            }
+                                          ],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"tempor_a\": \"<string>\"\n  },\n  \"properties\": {}\n}",
+                                          "createdAt": "2026-10-21T20:19:37.000Z",
+                                          "updatedAt": "2026-10-21T20:19:37.000Z",
+                                          "uid": "35240-5d3e3008-5908-4a92-852d-8c8f9729edc6"
+                                        },
+                                        {
+                                          "id": "8c914606-afad-4912-9e05-e3fe8180c322",
+                                          "name": "Resource created",
+                                          "originalRequest": {
+                                            "method": "PUT",
+                                            "header": [
+                                              {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "description": "Added as a part of security scheme: oauth2",
+                                                "key": "Authorization",
+                                                "value": "<token>"
+                                              }
+                                            ],
+                                            "body": {
+                                              "mode": "raw",
+                                              "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"tempor_a\": \"<string>\"\n  },\n  \"properties\": {}\n}",
+                                              "options": {
+                                                "raw": {
+                                                  "headerFamily": "json",
+                                                  "language": "json"
+                                                }
+                                              }
+                                            },
+                                            "url": {
+                                              "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers/:name?api-version=<string>",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "subscriptions",
+                                                ":subscriptionId",
+                                                "resourceGroups",
+                                                ":resourceGroupName",
+                                                "providers",
+                                                "Microsoft.DBforMySQL",
+                                                "flexibleServers",
+                                                ":name"
+                                              ],
+                                              "query": [
+                                                {
+                                                  "description": "(Required) The API version to use for this operation.",
+                                                  "key": "api-version",
+                                                  "value": "<string>"
+                                                }
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "subscriptionId"
+                                                },
+                                                {
+                                                  "key": "resourceGroupName"
+                                                },
+                                                {
+                                                  "key": "name"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "Created",
+                                          "code": 201,
+                                          "_postman_previewlanguage": "json",
+                                          "header": [
+                                            {
+                                              "key": "Content-Type",
+                                              "value": "application/json"
+                                            }
+                                          ],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"tempor_a\": \"<string>\"\n  },\n  \"properties\": {}\n}",
+                                          "createdAt": "2026-10-21T20:19:37.000Z",
+                                          "updatedAt": "2026-10-21T20:19:37.000Z",
+                                          "uid": "35240-8c914606-afad-4912-9e05-e3fe8180c322"
+                                        },
+                                        {
+                                          "id": "08ad458d-02cb-4dbf-9b9a-87a63cd2ef84",
+                                          "name": "Error",
+                                          "originalRequest": {
+                                            "method": "PUT",
+                                            "header": [
+                                              {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "description": "Added as a part of security scheme: oauth2",
+                                                "key": "Authorization",
+                                                "value": "<token>"
+                                              }
+                                            ],
+                                            "body": {
+                                              "mode": "raw",
+                                              "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"tempor_a\": \"<string>\"\n  },\n  \"properties\": {}\n}",
+                                              "options": {
+                                                "raw": {
+                                                  "headerFamily": "json",
+                                                  "language": "json"
+                                                }
+                                              }
+                                            },
+                                            "url": {
+                                              "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers/:name?api-version=<string>",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "subscriptions",
+                                                ":subscriptionId",
+                                                "resourceGroups",
+                                                ":resourceGroupName",
+                                                "providers",
+                                                "Microsoft.DBforMySQL",
+                                                "flexibleServers",
+                                                ":name"
+                                              ],
+                                              "query": [
+                                                {
+                                                  "description": "(Required) The API version to use for this operation.",
+                                                  "key": "api-version",
+                                                  "value": "<string>"
+                                                }
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "subscriptionId"
+                                                },
+                                                {
+                                                  "key": "resourceGroupName"
+                                                },
+                                                {
+                                                  "key": "name"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "Internal Server Error",
+                                          "code": 500,
+                                          "_postman_previewlanguage": "json",
+                                          "header": [
+                                            {
+                                              "key": "Content-Type",
+                                              "value": "application/json"
+                                            }
+                                          ],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\"\n  }\n}",
+                                          "createdAt": "2026-10-21T20:19:37.000Z",
+                                          "updatedAt": "2026-10-21T20:19:37.000Z",
+                                          "uid": "35240-08ad458d-02cb-4dbf-9b9a-87a63cd2ef84"
+                                        }
+                                      ],
+                                      "createdAt": "2026-10-21T20:19:37.000Z",
+                                      "updatedAt": "2026-10-21T20:19:37.000Z",
+                                      "uid": "35240-508dd18d-19a2-4741-a160-f31c6f2f5447"
+                                    },
+                                    {
+                                      "name": "Azure Database for MySQL REST API Update resource",
+                                      "id": "652743c0-40d6-4921-af70-40b0962a5bb1",
+                                      "protocolProfileBehavior": {
+                                        "disableBodyPruning": true
+                                      },
+                                      "request": {
+                                        "method": "PATCH",
+                                        "header": [
+                                          {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                          },
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n  \"anim_d\": false,\n  \"consequat_8b\": true,\n  \"et_da8\": -85828100.54891947,\n  \"quise\": false\n}",
+                                          "options": {
+                                            "raw": {
+                                              "headerFamily": "json",
+                                              "language": "json"
+                                            }
+                                          }
+                                        },
+                                        "url": {
+                                          "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers/:name?api-version=<string>",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "subscriptions",
+                                            ":subscriptionId",
+                                            "resourceGroups",
+                                            ":resourceGroupName",
+                                            "providers",
+                                            "Microsoft.DBforMySQL",
+                                            "flexibleServers",
+                                            ":name"
+                                          ],
+                                          "query": [
+                                            {
+                                              "description": "(Required) The API version to use for this operation.",
+                                              "key": "api-version",
+                                              "value": "<string>"
+                                            }
+                                          ],
+                                          "variable": [
+                                            {
+                                              "id": "9567a5b5-5a84-4e79-9242-640871a8a107",
+                                              "key": "subscriptionId",
+                                              "value": "<string>",
+                                              "description": "(Required) The ID of the target subscription."
+                                            },
+                                            {
+                                              "id": "70af3a6f-e731-4777-b0ba-ccc2944295a9",
+                                              "key": "resourceGroupName",
+                                              "value": "<string>",
+                                              "description": "(Required) The name of the resource group."
+                                            },
+                                            {
+                                              "id": "c6fb39f0-8638-482e-b0d7-e5d50bcda54a",
+                                              "key": "name",
+                                              "value": "<string>",
+                                              "description": "(Required) Name of the resource."
+                                            }
+                                          ]
+                                        },
+                                        "description": "Updates a flexibleServers resource."
+                                      },
+                                      "response": [
+                                        {
+                                          "id": "209d03b0-0d0c-42b1-8522-64a5ae68865d",
+                                          "name": "Resource updated",
+                                          "originalRequest": {
+                                            "method": "PATCH",
+                                            "header": [
+                                              {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "description": "Added as a part of security scheme: oauth2",
+                                                "key": "Authorization",
+                                                "value": "<token>"
+                                              }
+                                            ],
+                                            "body": {
+                                              "mode": "raw",
+                                              "raw": "{\n  \"anim_d\": false,\n  \"consequat_8b\": true,\n  \"et_da8\": -85828100.54891947,\n  \"quise\": false\n}",
+                                              "options": {
+                                                "raw": {
+                                                  "headerFamily": "json",
+                                                  "language": "json"
+                                                }
+                                              }
+                                            },
+                                            "url": {
+                                              "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers/:name?api-version=<string>",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "subscriptions",
+                                                ":subscriptionId",
+                                                "resourceGroups",
+                                                ":resourceGroupName",
+                                                "providers",
+                                                "Microsoft.DBforMySQL",
+                                                "flexibleServers",
+                                                ":name"
+                                              ],
+                                              "query": [
+                                                {
+                                                  "description": "(Required) The API version to use for this operation.",
+                                                  "key": "api-version",
+                                                  "value": "<string>"
+                                                }
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "subscriptionId"
+                                                },
+                                                {
+                                                  "key": "resourceGroupName"
+                                                },
+                                                {
+                                                  "key": "name"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "OK",
+                                          "code": 200,
+                                          "_postman_previewlanguage": "json",
+                                          "header": [
+                                            {
+                                              "key": "Content-Type",
+                                              "value": "application/json"
+                                            }
+                                          ],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"tempor_a\": \"<string>\"\n  },\n  \"properties\": {}\n}",
+                                          "createdAt": "2026-10-21T20:19:37.000Z",
+                                          "updatedAt": "2026-10-21T20:19:37.000Z",
+                                          "uid": "35240-209d03b0-0d0c-42b1-8522-64a5ae68865d"
+                                        },
+                                        {
+                                          "id": "c48ea6a7-cf1b-4ee5-81fb-b4851ee31bbc",
+                                          "name": "Error",
+                                          "originalRequest": {
+                                            "method": "PATCH",
+                                            "header": [
+                                              {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "description": "Added as a part of security scheme: oauth2",
+                                                "key": "Authorization",
+                                                "value": "<token>"
+                                              }
+                                            ],
+                                            "body": {
+                                              "mode": "raw",
+                                              "raw": "{\n  \"anim_d\": false,\n  \"consequat_8b\": true,\n  \"et_da8\": -85828100.54891947,\n  \"quise\": false\n}",
+                                              "options": {
+                                                "raw": {
+                                                  "headerFamily": "json",
+                                                  "language": "json"
+                                                }
+                                              }
+                                            },
+                                            "url": {
+                                              "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers/:name?api-version=<string>",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "subscriptions",
+                                                ":subscriptionId",
+                                                "resourceGroups",
+                                                ":resourceGroupName",
+                                                "providers",
+                                                "Microsoft.DBforMySQL",
+                                                "flexibleServers",
+                                                ":name"
+                                              ],
+                                              "query": [
+                                                {
+                                                  "description": "(Required) The API version to use for this operation.",
+                                                  "key": "api-version",
+                                                  "value": "<string>"
+                                                }
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "subscriptionId"
+                                                },
+                                                {
+                                                  "key": "resourceGroupName"
+                                                },
+                                                {
+                                                  "key": "name"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "Internal Server Error",
+                                          "code": 500,
+                                          "_postman_previewlanguage": "json",
+                                          "header": [
+                                            {
+                                              "key": "Content-Type",
+                                              "value": "application/json"
+                                            }
+                                          ],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\"\n  }\n}",
+                                          "createdAt": "2026-10-21T20:19:37.000Z",
+                                          "updatedAt": "2026-10-21T20:19:37.000Z",
+                                          "uid": "35240-c48ea6a7-cf1b-4ee5-81fb-b4851ee31bbc"
+                                        }
+                                      ],
+                                      "createdAt": "2026-10-21T20:19:37.000Z",
+                                      "updatedAt": "2026-10-21T20:19:37.000Z",
+                                      "uid": "35240-652743c0-40d6-4921-af70-40b0962a5bb1"
+                                    },
+                                    {
+                                      "name": "Azure Database for MySQL REST API Delete resource",
+                                      "id": "e51697c0-d51e-44b1-a43c-33db2c31abc1",
+                                      "protocolProfileBehavior": {
+                                        "disableBodyPruning": true
+                                      },
+                                      "request": {
+                                        "method": "DELETE",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers/:name?api-version=<string>",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "subscriptions",
+                                            ":subscriptionId",
+                                            "resourceGroups",
+                                            ":resourceGroupName",
+                                            "providers",
+                                            "Microsoft.DBforMySQL",
+                                            "flexibleServers",
+                                            ":name"
+                                          ],
+                                          "query": [
+                                            {
+                                              "description": "(Required) The API version to use for this operation.",
+                                              "key": "api-version",
+                                              "value": "<string>"
+                                            }
+                                          ],
+                                          "variable": [
+                                            {
+                                              "id": "045b30aa-2659-47a4-91ac-2ffedc2b060f",
+                                              "key": "subscriptionId",
+                                              "value": "<string>",
+                                              "description": "(Required) The ID of the target subscription."
+                                            },
+                                            {
+                                              "id": "3206bf23-89bb-4fd8-86d2-d97a962921ab",
+                                              "key": "resourceGroupName",
+                                              "value": "<string>",
+                                              "description": "(Required) The name of the resource group."
+                                            },
+                                            {
+                                              "id": "98fb80fb-f6df-4f34-b583-4cf457b4106f",
+                                              "key": "name",
+                                              "value": "<string>",
+                                              "description": "(Required) Name of the resource."
+                                            }
+                                          ]
+                                        },
+                                        "description": "Deletes a flexibleServers resource."
+                                      },
+                                      "response": [
+                                        {
+                                          "id": "019718e4-dcf6-433c-a17d-9185fb11b5e7",
+                                          "name": "Resource deleted",
+                                          "originalRequest": {
+                                            "method": "DELETE",
+                                            "header": [
+                                              {
+                                                "description": "Added as a part of security scheme: oauth2",
+                                                "key": "Authorization",
+                                                "value": "<token>"
+                                              }
+                                            ],
+                                            "url": {
+                                              "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers/:name?api-version=<string>",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "subscriptions",
+                                                ":subscriptionId",
+                                                "resourceGroups",
+                                                ":resourceGroupName",
+                                                "providers",
+                                                "Microsoft.DBforMySQL",
+                                                "flexibleServers",
+                                                ":name"
+                                              ],
+                                              "query": [
+                                                {
+                                                  "description": "(Required) The API version to use for this operation.",
+                                                  "key": "api-version",
+                                                  "value": "<string>"
+                                                }
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "subscriptionId"
+                                                },
+                                                {
+                                                  "key": "resourceGroupName"
+                                                },
+                                                {
+                                                  "key": "name"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "OK",
+                                          "code": 200,
+                                          "_postman_previewlanguage": "text",
+                                          "header": [],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": null,
+                                          "createdAt": "2026-10-21T20:19:37.000Z",
+                                          "updatedAt": "2026-10-21T20:19:37.000Z",
+                                          "uid": "35240-019718e4-dcf6-433c-a17d-9185fb11b5e7"
+                                        },
+                                        {
+                                          "id": "3a868c92-c5b3-4627-939c-f61e9afc669e",
+                                          "name": "Deletion accepted",
+                                          "originalRequest": {
+                                            "method": "DELETE",
+                                            "header": [
+                                              {
+                                                "description": "Added as a part of security scheme: oauth2",
+                                                "key": "Authorization",
+                                                "value": "<token>"
+                                              }
+                                            ],
+                                            "url": {
+                                              "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers/:name?api-version=<string>",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "subscriptions",
+                                                ":subscriptionId",
+                                                "resourceGroups",
+                                                ":resourceGroupName",
+                                                "providers",
+                                                "Microsoft.DBforMySQL",
+                                                "flexibleServers",
+                                                ":name"
+                                              ],
+                                              "query": [
+                                                {
+                                                  "description": "(Required) The API version to use for this operation.",
+                                                  "key": "api-version",
+                                                  "value": "<string>"
+                                                }
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "subscriptionId"
+                                                },
+                                                {
+                                                  "key": "resourceGroupName"
+                                                },
+                                                {
+                                                  "key": "name"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "Accepted",
+                                          "code": 202,
+                                          "_postman_previewlanguage": "text",
+                                          "header": [],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": null,
+                                          "createdAt": "2026-10-21T20:19:37.000Z",
+                                          "updatedAt": "2026-10-21T20:19:37.000Z",
+                                          "uid": "35240-3a868c92-c5b3-4627-939c-f61e9afc669e"
+                                        },
+                                        {
+                                          "id": "344c715f-c8ab-42bf-ac59-fa15640706a1",
+                                          "name": "Resource not found or already deleted",
+                                          "originalRequest": {
+                                            "method": "DELETE",
+                                            "header": [
+                                              {
+                                                "description": "Added as a part of security scheme: oauth2",
+                                                "key": "Authorization",
+                                                "value": "<token>"
+                                              }
+                                            ],
+                                            "url": {
+                                              "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers/:name?api-version=<string>",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "subscriptions",
+                                                ":subscriptionId",
+                                                "resourceGroups",
+                                                ":resourceGroupName",
+                                                "providers",
+                                                "Microsoft.DBforMySQL",
+                                                "flexibleServers",
+                                                ":name"
+                                              ],
+                                              "query": [
+                                                {
+                                                  "description": "(Required) The API version to use for this operation.",
+                                                  "key": "api-version",
+                                                  "value": "<string>"
+                                                }
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "subscriptionId"
+                                                },
+                                                {
+                                                  "key": "resourceGroupName"
+                                                },
+                                                {
+                                                  "key": "name"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "No Content",
+                                          "code": 204,
+                                          "_postman_previewlanguage": "text",
+                                          "header": [],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": null,
+                                          "createdAt": "2026-10-21T20:19:37.000Z",
+                                          "updatedAt": "2026-10-21T20:19:37.000Z",
+                                          "uid": "35240-344c715f-c8ab-42bf-ac59-fa15640706a1"
+                                        },
+                                        {
+                                          "id": "94514625-c5b7-48b1-bf04-42e378885dd0",
+                                          "name": "Error",
+                                          "originalRequest": {
+                                            "method": "DELETE",
+                                            "header": [
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "description": "Added as a part of security scheme: oauth2",
+                                                "key": "Authorization",
+                                                "value": "<token>"
+                                              }
+                                            ],
+                                            "url": {
+                                              "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers/:name?api-version=<string>",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "subscriptions",
+                                                ":subscriptionId",
+                                                "resourceGroups",
+                                                ":resourceGroupName",
+                                                "providers",
+                                                "Microsoft.DBforMySQL",
+                                                "flexibleServers",
+                                                ":name"
+                                              ],
+                                              "query": [
+                                                {
+                                                  "description": "(Required) The API version to use for this operation.",
+                                                  "key": "api-version",
+                                                  "value": "<string>"
+                                                }
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "subscriptionId"
+                                                },
+                                                {
+                                                  "key": "resourceGroupName"
+                                                },
+                                                {
+                                                  "key": "name"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "Internal Server Error",
+                                          "code": 500,
+                                          "_postman_previewlanguage": "json",
+                                          "header": [
+                                            {
+                                              "key": "Content-Type",
+                                              "value": "application/json"
+                                            }
+                                          ],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\"\n  }\n}",
+                                          "createdAt": "2026-10-21T20:19:37.000Z",
+                                          "updatedAt": "2026-10-21T20:19:37.000Z",
+                                          "uid": "35240-94514625-c5b7-48b1-bf04-42e378885dd0"
+                                        }
+                                      ],
+                                      "createdAt": "2026-10-21T20:19:37.000Z",
+                                      "updatedAt": "2026-10-21T20:19:37.000Z",
+                                      "uid": "35240-e51697c0-d51e-44b1-a43c-33db2c31abc1"
+                                    }
+                                  ],
+                                  "id": "9bb29905-d0ae-42a3-ad82-6b4e74145664",
+                                  "createdAt": "2026-10-21T20:19:37.000Z",
+                                  "updatedAt": "2026-10-21T20:19:37.000Z",
+                                  "uid": "35240-9bb29905-d0ae-42a3-ad82-6b4e74145664"
+                                },
+                                {
+                                  "name": "Azure Database for MySQL REST API List by resource group",
+                                  "id": "1411f7d7-b251-4f04-9f69-89a1b86208a9",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers?api-version=<string>",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "subscriptions",
+                                        ":subscriptionId",
+                                        "resourceGroups",
+                                        ":resourceGroupName",
+                                        "providers",
+                                        "Microsoft.DBforMySQL",
+                                        "flexibleServers"
+                                      ],
+                                      "query": [
+                                        {
+                                          "description": "(Required) The API version to use for this operation.",
+                                          "key": "api-version",
+                                          "value": "<string>"
+                                        }
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "8b3a807a-bf52-4303-b773-3dd2048a106d",
+                                          "key": "subscriptionId",
+                                          "value": "<string>",
+                                          "description": "(Required) The ID of the target subscription."
+                                        },
+                                        {
+                                          "id": "9e196e1d-5fc2-486d-ab2c-f00da5ec17ef",
+                                          "key": "resourceGroupName",
+                                          "value": "<string>",
+                                          "description": "(Required) The name of the resource group."
+                                        }
+                                      ]
+                                    },
+                                    "description": "Lists all flexibleServers resources within the specified resource group."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "fea69187-3b25-4e8b-aaa5-8c9f23021af5",
+                                      "name": "Resource list",
+                                      "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          },
+                                          {
+                                            "description": "Added as a part of security scheme: oauth2",
+                                            "key": "Authorization",
+                                            "value": "<token>"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers?api-version=<string>",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "subscriptions",
+                                            ":subscriptionId",
+                                            "resourceGroups",
+                                            ":resourceGroupName",
+                                            "providers",
+                                            "Microsoft.DBforMySQL",
+                                            "flexibleServers"
+                                          ],
+                                          "query": [
+                                            {
+                                              "description": "(Required) The API version to use for this operation.",
+                                              "key": "api-version",
+                                              "value": "<string>"
+                                            }
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "subscriptionId"
+                                            },
+                                            {
+                                              "key": "resourceGroupName"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"value\": [\n    {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"location\": \"<string>\",\n      \"tags\": {\n        \"in__6\": \"<string>\",\n        \"eiusmod7\": \"<string>\",\n        \"sitf\": \"<string>\"\n      },\n      \"properties\": {}\n    },\n    {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"<string>\",\n      \"location\": \"<string>\",\n      \"tags\": {\n        \"laborisc00\": \"<string>\",\n        \"proident4be\": \"<string>\"\n      },\n      \"properties\": {}\n    }\n  ],\n  \"nextLink\": \"<string>\"\n}",
+                                      "createdAt": "2026-10-21T20:19:37.000Z",
+                                      "updatedAt": "2026-10-21T20:19:37.000Z",
+                                      "uid": "35240-fea69187-3b25-4e8b-aaa5-8c9f23021af5"
+                                    },
+                                    {
+                                      "id": "3d816f8b-11bb-48c5-b733-5b41502c66f8",
+                                      "name": "Error",
+                                      "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          },
+                                          {
+                                            "description": "Added as a part of security scheme: oauth2",
+                                            "key": "Authorization",
+                                            "value": "<token>"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/subscriptions/:subscriptionId/resourceGroups/:resourceGroupName/providers/Microsoft.DBforMySQL/flexibleServers?api-version=<string>",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "subscriptions",
+                                            ":subscriptionId",
+                                            "resourceGroups",
+                                            ":resourceGroupName",
+                                            "providers",
+                                            "Microsoft.DBforMySQL",
+                                            "flexibleServers"
+                                          ],
+                                          "query": [
+                                            {
+                                              "description": "(Required) The API version to use for this operation.",
+                                              "key": "api-version",
+                                              "value": "<string>"
+                                            }
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "subscriptionId"
+                                            },
+                                            {
+                                              "key": "resourceGroupName"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "Internal Server Error",
+                                      "code": 500,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\"\n  }\n}",
+                                      "createdAt": "2026-10-21T20:19:37.000Z",
+                                      "updatedAt": "2026-10-21T20:19:37.000Z",
+                                      "uid": "35240-3d816f8b-11bb-48c5-b733-5b41502c66f8"
+                                    }
+                                  ],
+                                  "createdAt": "2026-10-21T20:19:37.000Z",
+                                  "updatedAt": "2026-10-21T20:19:37.000Z",
+                                  "uid": "35240-1411f7d7-b251-4f04-9f69-89a1b86208a9"
+                                }
+                              ],
+                              "id": "48eb05c4-295e-4fd0-bcf0-1baa921f6ef5",
+                              "createdAt": "2026-10-21T20:19:37.000Z",
+                              "updatedAt": "2026-10-21T20:19:37.000Z",
+                              "uid": "35240-48eb05c4-295e-4fd0-bcf0-1baa921f6ef5"
+                            }
+                          ],
+                          "id": "ba55b1e4-80c2-43bf-b144-4f4b34670049",
+                          "createdAt": "2026-10-21T20:19:37.000Z",
+                          "updatedAt": "2026-10-21T20:19:37.000Z",
+                          "uid": "35240-ba55b1e4-80c2-43bf-b144-4f4b34670049"
+                        }
+                      ],
+                      "id": "3aee9107-a2be-482d-a777-6ebc71c088a8",
+                      "createdAt": "2026-10-21T20:19:37.000Z",
+                      "updatedAt": "2026-10-21T20:19:37.000Z",
+                      "uid": "35240-3aee9107-a2be-482d-a777-6ebc71c088a8"
+                    }
+                  ],
+                  "id": "6d4e3aad-2b9a-4f1a-8057-3fe5a6fa5a6d",
+                  "createdAt": "2026-10-21T20:19:37.000Z",
+                  "updatedAt": "2026-10-21T20:19:37.000Z",
+                  "uid": "35240-6d4e3aad-2b9a-4f1a-8057-3fe5a6fa5a6d"
                 }
               ],
-              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"target\": \"string\"\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "93828972-0dfc-4892-9a38-b2b521a71047",
+              "createdAt": "2026-10-21T20:19:37.000Z",
+              "updatedAt": "2026-10-21T20:19:37.000Z",
+              "uid": "35240-93828972-0dfc-4892-9a38-b2b521a71047"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "b716face-8e03-4527-ba6e-98d408072fd9",
-          "name": "Azure Database for MySQL REST API List by resource group",
-          "request": {
-            "name": "Azure Database for MySQL REST API List by resource group",
-            "description": {
-              "content": "Lists all flexibleServers resources within the specified resource group.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "subscriptions",
-                ":subscriptionId",
-                "resourceGroups",
-                ":resourceGroupName",
-                "providers",
-                "Microsoft.DBforMySQL",
-                "flexibleServers"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [
-                {
-                  "disabled": false,
-                  "key": "api-version",
-                  "value": "<string>",
-                  "description": "(Required) The API version to use for this operation."
-                }
-              ],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "subscriptionId",
-                  "description": "(Required) The ID of the target subscription."
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "resourceGroupName",
-                  "description": "(Required) The name of the resource group."
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "67c02005-7652-4783-a106-7cfc41b3afa9",
-              "name": "Resource list",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "subscriptions",
-                    ":subscriptionId",
-                    "resourceGroups",
-                    ":resourceGroupName",
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "flexibleServers"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "api-version",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "subscriptionId",
-                      "description": "(Required) The ID of the target subscription."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resourceGroupName",
-                      "description": "(Required) The name of the resource group."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"value\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"location\": \"string\",\n      \"tags\": {\n        \"key_0\": \"string\"\n      },\n      \"properties\": {}\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"location\": \"string\",\n      \"tags\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"properties\": {}\n    }\n  ],\n  \"nextLink\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            },
-            {
-              "id": "8f943321-c8ba-49cb-be89-a6b102afc9cd",
-              "name": "Error",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "subscriptions",
-                    ":subscriptionId",
-                    "resourceGroups",
-                    ":resourceGroupName",
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "flexibleServers"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "api-version",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "subscriptionId",
-                      "description": "(Required) The ID of the target subscription."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resourceGroupName",
-                      "description": "(Required) The name of the resource group."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "Internal Server Error",
-              "code": 500,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"target\": \"string\"\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "74e3b37d-1f4e-4dba-8ca6-b2a37208ba65",
-          "name": "Azure Database for MySQL REST API Get resource",
-          "request": {
-            "name": "Azure Database for MySQL REST API Get resource",
-            "description": {
-              "content": "Gets a specific flexibleServers resource.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "subscriptions",
-                ":subscriptionId",
-                "resourceGroups",
-                ":resourceGroupName",
-                "providers",
-                "Microsoft.DBforMySQL",
-                "flexibleServers",
-                ":name"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [
-                {
-                  "disabled": false,
-                  "key": "api-version",
-                  "value": "<string>",
-                  "description": "(Required) The API version to use for this operation."
-                }
-              ],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "subscriptionId",
-                  "description": "(Required) The ID of the target subscription."
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "resourceGroupName",
-                  "description": "(Required) The name of the resource group."
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "name",
-                  "description": "(Required) Name of the resource."
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "0d78810c-3d71-478b-85a2-17c38e0e4f94",
-              "name": "Resource",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "subscriptions",
-                    ":subscriptionId",
-                    "resourceGroups",
-                    ":resourceGroupName",
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "flexibleServers",
-                    ":name"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "api-version",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "subscriptionId",
-                      "description": "(Required) The ID of the target subscription."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resourceGroupName",
-                      "description": "(Required) The name of the resource group."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "name",
-                      "description": "(Required) Name of the resource."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"type\": \"string\",\n  \"location\": \"string\",\n  \"tags\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"properties\": {}\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            },
-            {
-              "id": "d81aa4ed-b92d-4b2a-b5a1-14a0518e88dd",
-              "name": "Not found",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "subscriptions",
-                    ":subscriptionId",
-                    "resourceGroups",
-                    ":resourceGroupName",
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "flexibleServers",
-                    ":name"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "api-version",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "subscriptionId",
-                      "description": "(Required) The ID of the target subscription."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resourceGroupName",
-                      "description": "(Required) The name of the resource group."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "name",
-                      "description": "(Required) Name of the resource."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "Not Found",
-              "code": 404,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            },
-            {
-              "id": "f6ac5722-e57e-4ad7-9951-9f5869de4a71",
-              "name": "Error",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "subscriptions",
-                    ":subscriptionId",
-                    "resourceGroups",
-                    ":resourceGroupName",
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "flexibleServers",
-                    ":name"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "api-version",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "subscriptionId",
-                      "description": "(Required) The ID of the target subscription."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resourceGroupName",
-                      "description": "(Required) The name of the resource group."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "name",
-                      "description": "(Required) Name of the resource."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "Internal Server Error",
-              "code": 500,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"target\": \"string\"\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "705fc6d0-e044-412b-9a96-07106d899d3f",
-          "name": "Azure Database for MySQL REST API Create or update resource",
-          "request": {
-            "name": "Azure Database for MySQL REST API Create or update resource",
-            "description": {
-              "content": "Creates or updates a flexibleServers resource.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "subscriptions",
-                ":subscriptionId",
-                "resourceGroups",
-                ":resourceGroupName",
-                "providers",
-                "Microsoft.DBforMySQL",
-                "flexibleServers",
-                ":name"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [
-                {
-                  "disabled": false,
-                  "key": "api-version",
-                  "value": "<string>",
-                  "description": "(Required) The API version to use for this operation."
-                }
-              ],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "subscriptionId",
-                  "description": "(Required) The ID of the target subscription."
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "resourceGroupName",
-                  "description": "(Required) The name of the resource group."
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "name",
-                  "description": "(Required) Name of the resource."
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "PUT",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"key_0\": \"<string>\"\n  },\n  \"properties\": \"<object>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "42f0db17-55f1-4456-a634-f5c2e0aa3b4f",
-              "name": "Resource updated",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "subscriptions",
-                    ":subscriptionId",
-                    "resourceGroups",
-                    ":resourceGroupName",
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "flexibleServers",
-                    ":name"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "api-version",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "subscriptionId",
-                      "description": "(Required) The ID of the target subscription."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resourceGroupName",
-                      "description": "(Required) The name of the resource group."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "name",
-                      "description": "(Required) Name of the resource."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "PUT",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\"\n  },\n  \"properties\": \"<object>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"type\": \"string\",\n  \"location\": \"string\",\n  \"tags\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"properties\": {}\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            },
-            {
-              "id": "3a910fc0-647a-48c3-ac2b-0fa347ea7333",
-              "name": "Resource created",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "subscriptions",
-                    ":subscriptionId",
-                    "resourceGroups",
-                    ":resourceGroupName",
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "flexibleServers",
-                    ":name"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "api-version",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "subscriptionId",
-                      "description": "(Required) The ID of the target subscription."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resourceGroupName",
-                      "description": "(Required) The name of the resource group."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "name",
-                      "description": "(Required) Name of the resource."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "PUT",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\"\n  },\n  \"properties\": \"<object>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "Created",
-              "code": 201,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"type\": \"string\",\n  \"location\": \"string\",\n  \"tags\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"properties\": {}\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            },
-            {
-              "id": "9e505a79-4d87-48b4-98ec-180290cdadcc",
-              "name": "Error",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "subscriptions",
-                    ":subscriptionId",
-                    "resourceGroups",
-                    ":resourceGroupName",
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "flexibleServers",
-                    ":name"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "api-version",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "subscriptionId",
-                      "description": "(Required) The ID of the target subscription."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resourceGroupName",
-                      "description": "(Required) The name of the resource group."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "name",
-                      "description": "(Required) Name of the resource."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "PUT",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"location\": \"<string>\",\n  \"tags\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\"\n  },\n  \"properties\": \"<object>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "Internal Server Error",
-              "code": 500,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"target\": \"string\"\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "e5cecd66-ab78-4817-8027-3d11410a3dbf",
-          "name": "Azure Database for MySQL REST API Update resource",
-          "request": {
-            "name": "Azure Database for MySQL REST API Update resource",
-            "description": {
-              "content": "Updates a flexibleServers resource.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "subscriptions",
-                ":subscriptionId",
-                "resourceGroups",
-                ":resourceGroupName",
-                "providers",
-                "Microsoft.DBforMySQL",
-                "flexibleServers",
-                ":name"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [
-                {
-                  "disabled": false,
-                  "key": "api-version",
-                  "value": "<string>",
-                  "description": "(Required) The API version to use for this operation."
-                }
-              ],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "subscriptionId",
-                  "description": "(Required) The ID of the target subscription."
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "resourceGroupName",
-                  "description": "(Required) The name of the resource group."
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "name",
-                  "description": "(Required) Name of the resource."
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "PATCH",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"key_0\": \"string\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "4cf05b6a-1d54-4f33-9751-f60bf58a55a6",
-              "name": "Resource updated",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "subscriptions",
-                    ":subscriptionId",
-                    "resourceGroups",
-                    ":resourceGroupName",
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "flexibleServers",
-                    ":name"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "api-version",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "subscriptionId",
-                      "description": "(Required) The ID of the target subscription."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resourceGroupName",
-                      "description": "(Required) The name of the resource group."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "name",
-                      "description": "(Required) Name of the resource."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "PATCH",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"key_0\": \"string\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"type\": \"string\",\n  \"location\": \"string\",\n  \"tags\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"properties\": {}\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            },
-            {
-              "id": "0ea59f19-3f9e-4c2a-b766-621b236a48f0",
-              "name": "Error",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "subscriptions",
-                    ":subscriptionId",
-                    "resourceGroups",
-                    ":resourceGroupName",
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "flexibleServers",
-                    ":name"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "api-version",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "subscriptionId",
-                      "description": "(Required) The ID of the target subscription."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resourceGroupName",
-                      "description": "(Required) The name of the resource group."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "name",
-                      "description": "(Required) Name of the resource."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "PATCH",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"key_0\": \"string\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "Internal Server Error",
-              "code": 500,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"target\": \"string\"\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "1e94144b-2f9c-4642-b19b-d7bede87a2cb",
-          "name": "Azure Database for MySQL REST API Delete resource",
-          "request": {
-            "name": "Azure Database for MySQL REST API Delete resource",
-            "description": {
-              "content": "Deletes a flexibleServers resource.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "subscriptions",
-                ":subscriptionId",
-                "resourceGroups",
-                ":resourceGroupName",
-                "providers",
-                "Microsoft.DBforMySQL",
-                "flexibleServers",
-                ":name"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [
-                {
-                  "disabled": false,
-                  "key": "api-version",
-                  "value": "<string>",
-                  "description": "(Required) The API version to use for this operation."
-                }
-              ],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "subscriptionId",
-                  "description": "(Required) The ID of the target subscription."
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "resourceGroupName",
-                  "description": "(Required) The name of the resource group."
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "name",
-                  "description": "(Required) Name of the resource."
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "DELETE",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "e9edf5b0-e118-47a0-91e0-d48e659d9852",
-              "name": "Resource deleted",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "subscriptions",
-                    ":subscriptionId",
-                    "resourceGroups",
-                    ":resourceGroupName",
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "flexibleServers",
-                    ":name"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "api-version",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "subscriptionId",
-                      "description": "(Required) The ID of the target subscription."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resourceGroupName",
-                      "description": "(Required) The name of the resource group."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "name",
-                      "description": "(Required) Name of the resource."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            },
-            {
-              "id": "5b000d81-b737-4206-b55c-decf2d889947",
-              "name": "Deletion accepted",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "subscriptions",
-                    ":subscriptionId",
-                    "resourceGroups",
-                    ":resourceGroupName",
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "flexibleServers",
-                    ":name"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "api-version",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "subscriptionId",
-                      "description": "(Required) The ID of the target subscription."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resourceGroupName",
-                      "description": "(Required) The name of the resource group."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "name",
-                      "description": "(Required) Name of the resource."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {}
-              },
-              "status": "Accepted",
-              "code": 202,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            },
-            {
-              "id": "d1dbc426-580f-4ffd-83db-5d9c4e786717",
-              "name": "Resource not found or already deleted",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "subscriptions",
-                    ":subscriptionId",
-                    "resourceGroups",
-                    ":resourceGroupName",
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "flexibleServers",
-                    ":name"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "api-version",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "subscriptionId",
-                      "description": "(Required) The ID of the target subscription."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resourceGroupName",
-                      "description": "(Required) The name of the resource group."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "name",
-                      "description": "(Required) Name of the resource."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {}
-              },
-              "status": "No Content",
-              "code": 204,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            },
-            {
-              "id": "351e5604-1717-4256-8946-9b299e5049bb",
-              "name": "Error",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "subscriptions",
-                    ":subscriptionId",
-                    "resourceGroups",
-                    ":resourceGroupName",
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "flexibleServers",
-                    ":name"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "api-version",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "subscriptionId",
-                      "description": "(Required) The ID of the target subscription."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resourceGroupName",
-                      "description": "(Required) The name of the resource group."
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "name",
-                      "description": "(Required) Name of the resource."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {}
-              },
-              "status": "Internal Server Error",
-              "code": 500,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"target\": \"string\"\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "3c058b8a-af9d-41e4-a745-11b3322f7596",
+          "createdAt": "2026-10-21T20:19:37.000Z",
+          "updatedAt": "2026-10-21T20:19:37.000Z",
+          "uid": "35240-3c058b8a-af9d-41e4-a745-11b3322f7596"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "type": "string",
-      "value": "https://management.azure.com",
-      "key": "baseUrl"
+      "id": "5ea6c169-265c-4265-bacf-909df6b451b8",
+      "createdAt": "2026-10-21T20:19:37.000Z",
+      "updatedAt": "2026-10-21T20:19:37.000Z",
+      "uid": "35240-5ea6c169-265c-4265-bacf-909df6b451b8"
     }
   ],
   "auth": {
@@ -1658,25 +1591,25 @@
     "oauth2": [
       {
         "key": "scope",
-        "value": "user_impersonation"
+        "value": "user_impersonation",
+        "type": "string"
       },
       {
         "key": "authUrl",
-        "value": "https://login.microsoftonline.com/common/oauth2/authorize"
+        "value": "https://login.microsoftonline.com/common/oauth2/authorize",
+        "type": "string"
       },
       {
         "key": "grant_type",
-        "value": "implicit"
+        "value": "implicit",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "b600f88d-dbbc-4ffe-a4ff-3e91fe0bb1af",
-    "name": "Azure Database for MySQL REST Operations Servers API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "Azure Database for MySQL is a fully managed, scalable MySQL database service. The REST API manages flexible servers, databases, firewall rules, configurations, and backups.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://management.azure.com"
     }
-  }
+  ]
 }

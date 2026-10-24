@@ -1,167 +1,183 @@
 {
+  "info": {
+    "_postman_id": "bbb22b02-150c-435f-a195-9ed4bd3841a5",
+    "name": "Azure Database for MySQL REST Operations API",
+    "description": "Azure Database for MySQL is a fully managed, scalable MySQL database service. The REST API manages flexible servers, databases, firewall rules, configurations, and backups.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-21T20:19:31.000Z",
+    "updatedAt": "2026-10-21T20:19:31.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-bbb22b02-150c-435f-a195-9ed4bd3841a5"
+  },
   "item": [
     {
-      "id": "b21affd0-94bd-4ebf-bab3-66b52e3b5b2e",
-      "name": "Operations",
-      "description": {
-        "content": "Operations operations",
-        "type": "text/plain"
-      },
+      "name": "providers",
       "item": [
         {
-          "id": "769bc434-9e07-403d-b8b3-bc6c91d2cea1",
-          "name": "Azure Database for MySQL REST API List operations",
-          "request": {
-            "name": "Azure Database for MySQL REST API List operations",
-            "description": {
-              "content": "Lists all available REST API operations for Microsoft.DBforMySQL.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "providers",
-                "Microsoft.DBforMySQL",
-                "operations"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [
-                {
-                  "disabled": false,
-                  "key": "api-version",
-                  "value": "<string>",
-                  "description": "(Required) The API version to use for this operation."
-                }
-              ],
-              "variable": []
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
+          "name": "Microsoft.DBforMySQL",
+          "item": [
             {
-              "id": "26e2583b-8626-4628-a718-6232738d6bc6",
-              "name": "Operations list",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "operations"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
+              "name": "operations",
+              "item": [
+                {
+                  "name": "Azure Database for MySQL REST API List operations",
+                  "id": "ace5e85b-b5e1-450f-b34c-de43eb826b58",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/providers/Microsoft.DBforMySQL/operations?api-version=<string>",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "providers",
+                        "Microsoft.DBforMySQL",
+                        "operations"
+                      ],
+                      "query": [
+                        {
+                          "description": "(Required) The API version to use for this operation.",
+                          "key": "api-version",
+                          "value": "<string>"
+                        }
+                      ]
+                    },
+                    "description": "Lists all available REST API operations for Microsoft.DBforMySQL."
+                  },
+                  "response": [
                     {
-                      "key": "api-version",
-                      "value": "<string>"
+                      "id": "374161b6-8093-4894-978b-5554afc055ed",
+                      "name": "Operations list",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/providers/Microsoft.DBforMySQL/operations?api-version=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "providers",
+                            "Microsoft.DBforMySQL",
+                            "operations"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) The API version to use for this operation.",
+                              "key": "api-version",
+                              "value": "<string>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"value\": [\n    {\n      \"name\": \"<string>\",\n      \"display\": {\n        \"provider\": \"<string>\",\n        \"resource\": \"<string>\",\n        \"operation\": \"<string>\",\n        \"description\": \"<string>\"\n      },\n      \"isDataAction\": \"<boolean>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"display\": {\n        \"provider\": \"<string>\",\n        \"resource\": \"<string>\",\n        \"operation\": \"<string>\",\n        \"description\": \"<string>\"\n      },\n      \"isDataAction\": \"<boolean>\"\n    }\n  ],\n  \"nextLink\": \"<string>\"\n}",
+                      "createdAt": "2026-10-21T20:19:32.000Z",
+                      "updatedAt": "2026-10-21T20:19:32.000Z",
+                      "uid": "35240-374161b6-8093-4894-978b-5554afc055ed"
+                    },
+                    {
+                      "id": "3d3d757f-19fd-40dc-aced-91005e0e8f44",
+                      "name": "Error",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/providers/Microsoft.DBforMySQL/operations?api-version=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "providers",
+                            "Microsoft.DBforMySQL",
+                            "operations"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) The API version to use for this operation.",
+                              "key": "api-version",
+                              "value": "<string>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Internal Server Error",
+                      "code": 500,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"target\": \"<string>\"\n  }\n}",
+                      "createdAt": "2026-10-21T20:19:32.000Z",
+                      "updatedAt": "2026-10-21T20:19:32.000Z",
+                      "uid": "35240-3d3d757f-19fd-40dc-aced-91005e0e8f44"
                     }
                   ],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "createdAt": "2026-10-21T20:19:32.000Z",
+                  "updatedAt": "2026-10-21T20:19:32.000Z",
+                  "uid": "35240-ace5e85b-b5e1-450f-b34c-de43eb826b58"
                 }
               ],
-              "body": "{\n  \"value\": [\n    {\n      \"name\": \"string\",\n      \"display\": {\n        \"provider\": \"string\",\n        \"resource\": \"string\",\n        \"operation\": \"string\",\n        \"description\": \"string\"\n      },\n      \"isDataAction\": true\n    },\n    {\n      \"name\": \"string\",\n      \"display\": {\n        \"provider\": \"string\",\n        \"resource\": \"string\",\n        \"operation\": \"string\",\n        \"description\": \"string\"\n      },\n      \"isDataAction\": false\n    }\n  ],\n  \"nextLink\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            },
-            {
-              "id": "4bb43565-72e7-4da9-8d12-02ec9e0c1780",
-              "name": "Error",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "providers",
-                    "Microsoft.DBforMySQL",
-                    "operations"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "api-version",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: oauth2",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "<token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "Internal Server Error",
-              "code": 500,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"target\": \"string\"\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "0c6b2cba-415f-4557-9dc5-9f1adf9e2db9",
+              "createdAt": "2026-10-21T20:19:32.000Z",
+              "updatedAt": "2026-10-21T20:19:32.000Z",
+              "uid": "35240-0c6b2cba-415f-4557-9dc5-9f1adf9e2db9"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "e1472ba8-b5c5-4a7a-b3f1-432eb589b826",
+          "createdAt": "2026-10-21T20:19:32.000Z",
+          "updatedAt": "2026-10-21T20:19:32.000Z",
+          "uid": "35240-e1472ba8-b5c5-4a7a-b3f1-432eb589b826"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "type": "string",
-      "value": "https://management.azure.com",
-      "key": "baseUrl"
+      "id": "930ccad3-22f4-4511-b3f4-6f654f5bde50",
+      "createdAt": "2026-10-21T20:19:32.000Z",
+      "updatedAt": "2026-10-21T20:19:32.000Z",
+      "uid": "35240-930ccad3-22f4-4511-b3f4-6f654f5bde50"
     }
   ],
   "auth": {
@@ -169,25 +185,25 @@
     "oauth2": [
       {
         "key": "scope",
-        "value": "user_impersonation"
+        "value": "user_impersonation",
+        "type": "string"
       },
       {
         "key": "authUrl",
-        "value": "https://login.microsoftonline.com/common/oauth2/authorize"
+        "value": "https://login.microsoftonline.com/common/oauth2/authorize",
+        "type": "string"
       },
       {
         "key": "grant_type",
-        "value": "implicit"
+        "value": "implicit",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "73b81e1c-1786-4706-8c03-0e39d3afdf8a",
-    "name": "Azure Database for MySQL REST Operations API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "Azure Database for MySQL is a fully managed, scalable MySQL database service. The REST API manages flexible servers, databases, firewall rules, configurations, and backups.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://management.azure.com"
     }
-  }
+  ]
 }
