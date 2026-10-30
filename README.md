@@ -1,4 +1,4 @@
-# Azure Database for MySQL (microsoft-azure-mysql)
+# Azure Database for MySQL
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,230 +66,141 @@
 
 Azure Database for MySQL is a fully managed relational database service based on the open-source MySQL community edition. Its REST APIs enable management of flexible servers, single servers, databases, firewall and network rules, configurations, replicas, and backups with built-in high availability and automated backups.
 
-**APIs.json:** [https://azure.microsoft.com/en-us/services/mysql/](https://azure.microsoft.com/en-us/services/mysql/)
+**Areas:** Database · Flexible Server · Managed Database · MySQL · Open Source · Relational Database
 
-## Tags
+## Azure Database for MySQL on APIs.io
 
-- Database
-- Flexible Server
-- Managed Database
-- MySQL
-- Open Source
-- Relational Database
+Everything profiled for Azure Database for MySQL is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/microsoft-azure-mysql/](https://apis.io/providers/microsoft-azure-mysql/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (10)
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+- [Azure Database for MySQL Databases API](https://apis.io/apis/microsoft-azure-mysql/azure-database-for-mysql-databases-api/) — Create, list, retrieve, and delete databases hosted on a MySQL Flexible Server. Manage character sets and collations for each database within a server.
+- [Azure Database for MySQL Firewall Rules API](https://apis.io/apis/microsoft-azure-mysql/azure-database-for-mysql-firewall-rules-api/) — Create and manage server-level firewall rules to grant access to a MySQL Flexible Server from specified client IP address ranges. Required for clients…
+- [Azure Database for MySQL Configurations API](https://apis.io/apis/microsoft-azure-mysql/azure-database-for-mysql-configurations-api/) — Manage server parameters (configurations) for a MySQL Flexible Server. Adjust MySQL engine variables such as character_set_server, time_zone, and…
+- [Azure Database for MySQL Replicas API](https://apis.io/apis/microsoft-azure-mysql/azure-database-for-mysql-replicas-api/) — Manage read replicas for MySQL Flexible Server to scale out read-heavy workloads. Create replicas in the same or different region for performance and read…
+- [Azure Database for MySQL Backups API](https://apis.io/apis/microsoft-azure-mysql/azure-database-for-mysql-backups-api/) — List and manage automated backups for MySQL Flexible Servers, including on-demand backup creation, retention configuration, and point-in-time restore…
+- [Azure Database for MySQL Administrators API](https://apis.io/apis/microsoft-azure-mysql/azure-database-for-mysql-administrators-api/) — Configure Azure Active Directory administrators for MySQL Flexible Server. Allows tenant users, groups, or service principals to be designated as MySQL…
+- [Azure Database for MySQL Check Name Availability API](https://apis.io/apis/microsoft-azure-mysql/azure-database-for-mysql-check-name-availability-api/) — Check whether a proposed MySQL Flexible Server name is available within the Azure global namespace before creating a new server.
+- [Azure Database for MySQL Operations API](https://apis.io/apis/microsoft-azure-mysql/azure-database-for-mysql-operations-api/) — List Azure Database for MySQL provider operations available in the subscription, including supported operation types and metadata.
+- [Azure Database for MySQL Operations API](https://apis.io/apis/microsoft-azure-mysql/microsoft-azure-mysql-operations-api/) — Operations operations
+- [Azure Database for MySQL Servers API](https://apis.io/apis/microsoft-azure-mysql/microsoft-azure-mysql-servers-api/) — Servers operations
 
-## APIs
+### Published properties
 
-### Azure Database for MySQL Flexible Servers API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Create and manage MySQL Flexible Servers, including SKU, storage, networking, high availability mode, maintenance windows, and identity. Flexible Server provides granular control and zone redundant high availability for production workloads.
+#### Agentic access (1)
 
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/servers](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/servers)
-- **Base URL:** `https://management.azure.com`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Microsoft Azure Mysql Agentic Access](https://apis.io/agentic-access/microsoft-azure-mysql/microsoft-azure-mysql-agentic-access/)
 
-- Flexible Server
-- High Availability
-- MySQL
-- Server Management
+#### Collections (3)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [OpenAPI](openapi/microsoft-azure-mysql-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/microsoft-azure-mysql.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-azure-mysql.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/servers)
-- [Authentication](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow)
-- [Getting Started](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/quickstart-create-server-portal)
+- [Azure Database for MySQL REST API](https://apis.io/collections/microsoft-azure-mysql/open-microsoft-azure-mysql/)
+- [Azure Database for MySQL REST Operations API](https://apis.io/collections/microsoft-azure-mysql/open-microsoft-azure-mysql-operations-api/)
+- [Azure Database for MySQL REST Operations Servers API](https://apis.io/collections/microsoft-azure-mysql/open-microsoft-azure-mysql-servers-api/)
 
-### Azure Database for MySQL Databases API
+#### Security (2)
 
-Create, list, retrieve, and delete databases hosted on a MySQL Flexible Server. Manage character sets and collations for each database within a server.
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/databases](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/databases)
-- **Base URL:** `https://management.azure.com`
+- [Microsoft Azure Mysql Authentication](https://apis.io/security/microsoft-azure-mysql/microsoft-azure-mysql-authentication/)
+- [Microsoft Azure Mysql Domain Security](https://apis.io/security/microsoft-azure-mysql/microsoft-azure-mysql-domain-security/)
 
-#### Tags
+#### OAuth scopes (1)
 
-- Charset
-- Collation
-- Database
-- MySQL
+The permissions the API asks for.
 
-#### Properties
+- [Microsoft Azure Mysql Scopes](https://apis.io/scopes/microsoft-azure-mysql/microsoft-azure-mysql-scopes/)
 
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/databases)
-- [Postman Collection](collections/microsoft-azure-mysql.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-azure-mysql.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Plans and pricing (1)
 
-### Azure Database for MySQL Firewall Rules API
+Published plans, tiers and prices.
 
-Create and manage server-level firewall rules to grant access to a MySQL Flexible Server from specified client IP address ranges. Required for clients connecting from outside the Azure network.
+- [Microsoft Azure Mysql Plans Pricing](https://apis.io/plans/microsoft-azure-mysql/microsoft-azure-mysql-plans-pricing/)
 
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/firewall-rules](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/firewall-rules)
-- **Base URL:** `https://management.azure.com`
+#### Rate limits (1)
 
-#### Tags
+Published request limits.
 
-- Access Control
-- Firewall Rules
-- IP Allowlist
-- Networking
+- [Microsoft Azure Mysql Rate Limits](https://apis.io/rate-limits/microsoft-azure-mysql/microsoft-azure-mysql-rate-limits/)
 
-#### Properties
+#### FinOps (1)
 
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/firewall-rules)
-- [Reference](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/concepts-networking)
-- [Postman Collection](collections/microsoft-azure-mysql.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-azure-mysql.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+What the API costs to run, by operation.
 
-### Azure Database for MySQL Configurations API
+- [Microsoft Azure Mysql Finops](https://apis.io/finops/microsoft-azure-mysql/microsoft-azure-mysql-finops/)
 
-Manage server parameters (configurations) for a MySQL Flexible Server. Adjust MySQL engine variables such as character_set_server, time_zone, and innodb_buffer_pool_size to tune performance and behavior.
+## Where to find this API
 
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/configurations](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/configurations)
-- **Base URL:** `https://management.azure.com`
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Tags
-
-- Configuration
-- Parameters
-- Server Settings
-- Tuning
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/configurations)
-- [Reference](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/concepts-server-parameters)
-- [Postman Collection](collections/microsoft-azure-mysql.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-azure-mysql.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Azure Database for MySQL Replicas API
-
-Manage read replicas for MySQL Flexible Server to scale out read-heavy workloads. Create replicas in the same or different region for performance and read distribution.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/replicas](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/replicas)
-- **Base URL:** `https://management.azure.com`
-
-#### Tags
-
-- Read Replica
-- Replication
-- Scale-Out
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/replicas)
-- [Reference](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/concepts-read-replicas)
-- [Postman Collection](collections/microsoft-azure-mysql.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-azure-mysql.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Azure Database for MySQL Backups API
-
-List and manage automated backups for MySQL Flexible Servers, including on-demand backup creation, retention configuration, and point-in-time restore operations.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/backups](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/backups)
-- **Base URL:** `https://management.azure.com`
-
-#### Tags
-
-- Backup
-- Disaster Recovery
-- Point-In-Time Restore
-- Retention
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/backups)
-- [Reference](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/concepts-backup-restore)
-- [Postman Collection](collections/microsoft-azure-mysql.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-azure-mysql.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Azure Database for MySQL Administrators API
-
-Configure Azure Active Directory administrators for MySQL Flexible Server. Allows tenant users, groups, or service principals to be designated as MySQL administrators for AAD-based authentication.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/azure-ad-administrators](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/azure-ad-administrators)
-- **Base URL:** `https://management.azure.com`
-
-#### Tags
-
-- AAD
-- Administrators
-- Authentication
-- Identity
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/azure-ad-administrators)
-- [Reference](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/concepts-azure-ad-authentication)
-- [Postman Collection](collections/microsoft-azure-mysql.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-azure-mysql.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Azure Database for MySQL Check Name Availability API
-
-Check whether a proposed MySQL Flexible Server name is available within the Azure global namespace before creating a new server.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/check-name-availability](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/check-name-availability)
-- **Base URL:** `https://management.azure.com`
-
-#### Tags
-
-- Availability
-- Name Validation
-- Provisioning
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/check-name-availability)
-- [Postman Collection](collections/microsoft-azure-mysql.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-azure-mysql.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Azure Database for MySQL Operations API
-
-List Azure Database for MySQL provider operations available in the subscription, including supported operation types and metadata.
-
-- **Human URL:** [https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/operations](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/operations)
-- **Base URL:** `https://management.azure.com`
-
-#### Tags
-
-- Operations
-- Provider
-- Resource Provider
-
-#### Properties
-
-- [Documentation](https://learn.microsoft.com/en-us/rest/api/mysql/flexibleserver/operations)
-- [Postman Collection](collections/microsoft-azure-mysql.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/microsoft-azure-mysql.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [Portal](https://portal.azure.com)
-- [Documentation](https://learn.microsoft.com/en-us/azure/mysql/)
-- [Getting Started](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/quickstart-create-server-portal)
-- [Authentication](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow)
-- [S D Ks](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/connect-csharp)
-- [Pricing](https://azure.microsoft.com/en-us/pricing/details/mysql/)
-- [Status Page](https://status.azure.com/)
-- [Support](https://azure.microsoft.com/en-us/support/options/)
-- [Blog](https://azure.microsoft.com/en-us/blog/tag/azure-database-for-mysql/)
-- [Changelog](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/whats-new)
-- [Terms of Service](https://azure.microsoft.com/en-us/support/legal/)
-- [Privacy Policy](https://privacy.microsoft.com/en-us/privacystatement)
-- [GitHub Organization](https://github.com/Azure)
 - [Website](https://azure.microsoft.com/en-us/products/mysql)
-- [Login](https://portal.azure.com)
-- [Sign Up](https://azure.microsoft.com/en-us/free)
-- [L L Ms Txt](https://portal.azure.com/llms.txt)
+- [Documentation](https://learn.microsoft.com/en-us/azure/mysql/)
+- [Getting started](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/quickstart-create-server-portal)
+- [Pricing](https://azure.microsoft.com/en-us/pricing/details/mysql/)
+- [Support](https://azure.microsoft.com/en-us/support/options/)
+- [Changelog](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/whats-new)
+- [Blog](https://azure.microsoft.com/en-us/blog/tag/azure-database-for-mysql/)
+- [Terms of service](https://azure.microsoft.com/en-us/support/legal/)
+- [Privacy policy](https://privacy.microsoft.com/en-us/privacystatement)
+- [GitHub](https://github.com/Azure)
+- [Status](https://status.azure.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 51.9** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 85.7 |
+| Contract quality | 44.1 |
+| Contract governance | 0.0 |
+| Operational transparency | 42.1 |
+| Developer ergonomics | 63.1 |
+| Access clarity | 52.6 |
+
+**Agent readiness 19.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/microsoft-azure-mysql/](https://apis.io/providers/microsoft-azure-mysql/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Azure Database for MySQL: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/microsoft-azure-mysql/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
